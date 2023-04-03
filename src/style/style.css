@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+nav {
+    background: #ffffff;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
+    position: fixed;
+    z-index: 10;
+}
+
+nav .logo {
+    width: 200px;
+}
+nav ul {
+    display: flex;
+
+}
+
+nav ul li {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 5px;
+    
+}
+
+nav ul li a {
+    border-radius: 3px;
+    padding: 4px 14px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #074c97;
+    transition: .5s;
+    color: #ffffff;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #074c97;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+#slider {
+    position: relative;
+    height: 100%;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+  
+  .slide-caption {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .slide-caption h3 {
+    text-align: center;
+    margin: auto;
+    font-size: 10rem;
+  }
+  
+  .slide-caption p {
+    text-align: center;
+    margin: 0;
+  }
+  
+  #slider-controls {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #slider-controls button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+
+
+  .main {
+    width: 100%;
+  }
+
+  .container {
+    width: 1400px;
+    height: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .card {
+    background: #00AEFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 55px 5px #000000;
+    padding: 0 30px;
+    margin-top: -150px;
+    transition: all .3s ease-in;
+    z-index: 5;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .card:hover {
+    background: #074C97;
+    transform: translateY(-50px);
+
+  }
+
+  .card i {
+    font-size: 60px;
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-top: -50px;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.card p {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.card a {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 700;
+}
+
+.card a:hover {
+    background: #000;
+    color: #fff;
+}
+
+  .tanusitvany {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+
+  .tanusitvany span {
+    padding: 30px;
+  }
+
+  .tanusitvany span img {
+    width: 300px;
+  }
+
+  .tan-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .tan-link a {
+    background: #00AEFF;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    width: 600px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .tan-link a:hover {
+    background: #074C97;
+    color: #fff;
+  }
+
+  .termek {
+    background: #074c97;
+background: -webkit-linear-gradient(0deg, #074c97 0%, #00aeff 100%);
+background: linear-gradient(0deg, #074c97 0%, #00aeff 100%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+  }
+
+  .termek .title h1 {
+    position: relative;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .termek .title h1::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: calc(100% - (50% + 75px));
+    width: 150px;
+    border-bottom: 5px solid black;
+  }
+
+  .termek .title p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 60px;
+    font-weight: 500;
+  }
+
+  .termek .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px auto;
+    gap: 30px;
+  }
+
+  .termek .products .box {
+    max-width: 400px;
+    height: auto;
+  }
+
+  .termek .products .box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .rolunk {
+    padding: 100px 50px;
+    
+  }
+
+  .rolunk .title {
+    text-align: center;
+    
+  }
+
+  .rolunk .title h1 {
+    position: relative;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rolunk .title h1::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: calc(100% - (50% + 75px));
+    width: 150px;
+    border-bottom: 5px solid black;
+  }
+
+  .rolunk .title p {
+    font-size: 1.5rem;
+    margin: 50px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .rolunk .title a {
+    background: #00AEFF;
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+
+  .rolunk .title a:hover {
+    background: #074c97;
+    color: #fff;
+  }
+
+  .kapcsolat {
+    padding: 50px 20px;
+    background: #010a14;
+    color: wheat
+  }
+
+.kapcsolat .title {
+    text-align: center;
+    
+  }
+
+.kapcsolat .title h1 {
+    position: relative;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kapcsolat .title h1::after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: calc(100% - (50% + 75px));
+  width: 150px;
+  border-bottom: 5px solid rgb(255, 255, 255);
+}
+
+.kapcsolat .contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.kapcsolat .contact h3 {
+    margin: 20px;
+  }
+
+  .kapcsolat .contact ul li {
+    margin: 20px;
+  }
+
+  .kapcsolat .contact ul li:hover {
+    color: #074c97;
+  }
+
+  .kapcsolat .contact ul li i {
+    margin-right: 30px;
+    font-size: 20px;
+  }
+
+.kapcsolat .contact .footer-logo img {
+  width: 400px;
+}
+
+#prev-slide,
+#next-slide {
+        background: rgba(0, 0, 0, .5);
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+        margin: 10px;
+      }
+    
+#prev-slide:hover,
+#next-slide:hover {
+    background: rgba(0, 0, 0, .8);
+}
+
+i {
+    font-size: 40px;
+}
+
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav {
+        padding: 0 30px;
+    }
+
+    nav .logo {
+        width: 150px;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+        border-top: 2px solid #074c97;
+    }
+
+    nav ul li {
+        margin: 30px;
+        font-size: 1rem;
+    }
+
+    #check:checked ~nav ul {
+        background-color: #ffffff;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .slide-caption {
+        top: 40%;
+        
+    }
+
+
+    .slide h3,
+    .slide p {
+        font-size: .9rem;
+    }
+
+    .slide img {
+        height: 100%;
+        object-fit: cover;
+        
+    }
+
+    .container {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+
+    .card {
+        margin-top: 0;
+        width: 100%;
+        height: 400px;;
+        text-align: center;
+    }
+
+
+    .card h3 {
+        font-size: 2rem;
+        margin-top: -50px;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    .card:hover {
+        background: #074C97;
+      }
+
+    .tanusitvany {
+        margin-top: 850px;
+    }
+
+    .tanusitvany span {
+        padding: 10px;
+      }
+    
+      .tanusitvany span img {
+        width: 100px;
+      }
+
+      .tan-link {
+        width: 300px;
+      }
+
+      .tan-link a {
+        width: 350px;
+        text-align: center;
+        font-size: .8rem;
+      }
+      .termek {
+        height: auto;
+      }
+
+      .termek .title h1,
+      .rolunk .title h1,
+      .kapcsolat .title h1 {
+        font-size: 1.5rem;
+      }
+
+      .termek .title h1::after,
+      .rolunk .title h1::after {
+        top: 30px;
+        border-bottom: 2px solid black;
+      }
+
+      .termek .title p,
+      .rolunk .title p {
+        margin-top: 20px;
+        font-size: 1rem;
+
+      }
+
+      .termek .products {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .rolunk {
+        padding: 50px 20px;
+        
+      }
+
+      .rolunk .title a {
+        padding: 10px 20px;
+        font-size: .8rem;
+      }
+
+      .kapcsolat .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 20px;
+      }
+
+      .kapcsolat .title h1::after {
+        top: 30px;
+        border-bottom: 2px solid rgb(255, 255, 255);
+      }
+
+      .kapcsolat .contact .footer-logo img {
+        width: 200px;
+        margin-top: 20px;
+      }
+
+      .kapcsolat .contact h3 {
+        margin: 20px;
+      }
+
+      .kapcsolat .contact ul li {
+        margin: 5px;
+      }
+
+      .kapcsolat .contact ul li i {
+        margin-right: 10px;
+      }
+
+      #prev-slide,
+      #next-slide {
+        background: rgba(0, 0, 0, .5);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+
+      i {
+        font-size: 20px;
+    }
+
+}
+
+
+
